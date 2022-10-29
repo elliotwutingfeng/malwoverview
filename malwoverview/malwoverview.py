@@ -26,7 +26,6 @@ import os
 import sys
 import re
 import pefile
-import peutils
 import magic
 import argparse
 import requests
@@ -37,25 +36,20 @@ import validators
 import geocoder
 import threading
 import socket
-import urllib3
 import subprocess
-import types
 import textwrap
 import base64
 import configparser
 import platform
 import binascii
-from operator import itemgetter
 from polyswarm_api.api import PolyswarmAPI
 from urllib.parse import urlparse
-from colorama import init, Fore, Back, Style
+from colorama import init, Fore
 from datetime import datetime
-from urllib.parse import urlencode, quote_plus
-from urllib.parse import quote
 from requests.exceptions import RetryError
 from pathlib import Path
-from io import StringIO, BytesIO
-from requests import Request, Session, exceptions
+from io import BytesIO
+from requests import Request
 
 # On Windows systems, it is necessary to install python-magic-bin: pip install python-magic-bin
 
@@ -9821,3 +9815,4 @@ if __name__ == "__main__":
     if (repo is not None):
         repository = repo
         vtdirchecking(repository, urlfilevt3, vtpubpremiumx)
+
